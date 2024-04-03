@@ -70,7 +70,7 @@ with sdxl_image.imports():
 # online for 4 minutes before spinning down. This can be adjusted for cost/experience trade-offs.
 
 
-@stub.cls(gpu=gpu.A10G(), container_idle_timeout=240, image=sdxl_image)
+@stub.cls(gpu=gpu.T4(), container_idle_timeout=20, image=sdxl_image)
 class Model:
     @build()
     def build(self):
